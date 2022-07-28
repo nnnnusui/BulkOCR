@@ -1,0 +1,58 @@
+root: true
+env:
+  es2020: true
+  browser: true
+  node: true
+parser: "@typescript-eslint/parser"
+parserOptions:
+  sourceType: module
+plugins:
+  - "@typescript-eslint"
+  - unused-imports
+  - "react"
+  - "solid"
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "plugin:solid/recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:@typescript-eslint/eslint-recommended"
+settings:
+  react:
+    version: "15.0"
+rules:
+  "@typescript-eslint/no-empty-function": off
+  unused-imports/no-unused-imports-ts: warn
+  semi:
+    - error
+    - always
+  indent:
+    - error
+    - 2
+  comma-dangle:
+    - error
+    - always-multiline
+  arrow-parens:
+    - error
+    - always
+  object-curly-spacing:
+    - error
+    - always
+  object-curly-newline:
+    - error
+    - always
+  no-trailing-spaces: error
+  react/react-in-jsx-scope: off
+  react/no-unknown-property: off
+  react/jsx-key: off
+  react/prop-types: off
+  react/jsx-wrap-multilines:
+    - "error"
+    -
+      "declaration": "parens-new-line"
+      "assignment": "parens-new-line"
+      "return": "parens-new-line"
+      "arrow": "parens-new-line"
+      "condition": "parens-new-line"
+      "logical": "ignore"
+      "prop": "ignore"

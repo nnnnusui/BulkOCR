@@ -1,0 +1,37 @@
+{
+  "scripts": {
+    "lint:eslint": "eslint src/**/*.{ts,tsx}",
+    "lint:stylelint": "stylelint src/**/*.styl",
+    "lint": "run-p lint:*",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:stylelint": "npm run lint:stylelint -- --fix",
+    "fix": "run-s fix:*",
+    "build:vite": "vite build",
+    "build": "run-p build:*",
+    "routine": "run-s fix build",
+    "monitor": "nodemon --ignore out --exec 'npm run routine'",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-solid": "^0.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^14.8.5",
+    "stylelint-plugin-stylus": "^0.13.1",
+    "stylus": "^0.58.1",
+    "tesseract.ts": "^1.1.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
+    "vite-plugin-solid": "^2.2.6"
+  },
+  "dependencies": {
+    "solid-js": "^1.4.2",
+    "tesseract.js": "^1.0.19"
+  }
+}
